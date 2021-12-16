@@ -27,10 +27,20 @@
 <script>
 import Jumbotron from "@/views/home/Jumbotron";
 import CardItem from "@/views/home/CardItem";
+import { mapActions } from "vuex";
 export default {
     components:{
         Jumbotron,
         CardItem
+    },
+
+     methods: {
+    ...mapActions(["getMovies"]),
+   },
+
+    created(){
+      this.getMovies();
+      
     }
 }
 </script>
