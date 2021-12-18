@@ -1,5 +1,5 @@
 <template>
-  <div class="card m-1" style="width: 15rem; height: 20rem">
+  <div class="card me-1" style="width: 14rem; height: 20rem">
     <img
       class="card-img-top"
       :src="imagePath + movie.backdrop_path"
