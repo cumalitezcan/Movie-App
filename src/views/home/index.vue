@@ -6,19 +6,11 @@
         <h2>Popular Movies</h2>
         <div class="row">
             <div class="d-flex flex-wrap">
-                <div v-for="i in 7" :key="i" >
-                    <CardItem />
+                <div v-for="(movie,index)  in movies.results" :key="index" >
+                    <CardItem :movie="movie" />
                 </div>
             </div>
       </div>
-        <h2>Popular Movies</h2>
-        <div class="row mb-5">
-            <div class="d-flex flex-wrap">
-                <div v-for="i in 7" :key="i" >
-                    <CardItem />
-                </div>
-            </div>
-        </div>
       </div>
     </div>
   </div>
@@ -27,7 +19,7 @@
 <script>
 import Jumbotron from "@/views/home/Jumbotron";
 import CardItem from "@/views/home/CardItem";
-import { mapActions } from "vuex";
+import { mapActions,mapState } from "vuex";
 export default {
     components:{
         Jumbotron,
@@ -37,6 +29,11 @@ export default {
      methods: {
     ...mapActions(["getMovies"]),
    },
+
+     computed:{
+    ...mapState(["movies"]),
+
+     },
 
     created(){
       this.getMovies();

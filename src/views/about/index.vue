@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="about" style="max-height: 100%;">
     <div class="container">
         <h1>About us</h1>
          <hr />
@@ -26,11 +26,16 @@ Generated 5 paragraphs, 498 words, 3286 bytes of Lorem Ipsum</p>
         </div>
     </div>
     <hr />
-    <Footer />
     </div>
+      <Footer />
 </template>
 
 <style scoped>
+
+.about{
+    max-height: 100%;
+}
+
 p {
   font-family: "Times New Roman", Times, serif;
   color: rgb(153, 81, 248);
