@@ -1,11 +1,12 @@
 <template>
-    <div class="about" style="max-height: 100%;">
+    <div class="about" style="background-color:#484545;">
+      <Navbar />
     <div class="container">
-        <h1>About us</h1>
+        <h1 class="fw-bolder text-light">About us</h1>
          <hr />
         <div class="row">
-            <div class="col-12">
-                <p>Lorem Ipsum
+            <div class="col-md-12">
+                <p class="text-light">Lorem Ipsum
 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
 "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
 
@@ -21,23 +22,42 @@ Maecenas quis eros eu tellus imperdiet luctus vel in dolor. Sed bibendum arcu lo
 Nam orci nulla, venenatis nec ultrices et, sagittis ac mauris. Fusce tincidunt sapien magna, id placerat ligula volutpat id. Nullam ultricies odio quam. Sed lacinia fringilla est eu placerat. Phasellus auctor lacinia mauris eu mattis. Nulla facilisi. In ac elit iaculis enim mattis ornare. Sed vitae viverra massa. Aenean mattis, nibh eget iaculis pulvinar, nisl est ornare ex, eget posuere sapien sem ut mi. Aenean magna velit, porta a nulla id, mattis bibendum nibh. Nunc vitae gravida sapien.
 
 Generated 5 paragraphs, 498 words, 3286 bytes of Lorem Ipsum</p>
-
-            </div>
-        </div>
+                <hr>
+            </div>  
+        </div>    
     </div>
-    <hr />
+    
+     <Footer />
     </div>
-      <Footer />
+     
 </template>
 
-<style scoped>
-
-.about{
-    max-height: 100%;
+<script>
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+export default {
+  components:{
+    Navbar,
+    Footer
+  },
 }
+</script>
 
+<style >
+
+html, body, #app{
+  width:100%;
+  height: 100%;
+}
 p {
   font-family: "Times New Roman", Times, serif;
-  color: rgb(153, 81, 248);
+  color: black;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  justify-content: space-between;
 }
 </style>
