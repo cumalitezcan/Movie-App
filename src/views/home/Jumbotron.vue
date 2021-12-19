@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-4 p-5 bg-primary text-white rounded">
-      <h1>Jumbotron Example</h1>
-      <p>Lorem ipsum...</p>
+  <div class="mt-3 p-5 text-light bg-dark rounded text-center">
+      <h1 class="fst-italic">My Movie World</h1>
+      <p class="mb-2 font-monospace">Watch the most popular movies in our site...</p>
   </div>
 </template>

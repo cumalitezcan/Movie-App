@@ -51,7 +51,25 @@ const store = createStore({
           }
         }
         return newList;
-      }
+      },
+      getMoviesPopulerKidsByParts:(state) => {
+        let newList = []
+        let pieces = []
+
+        for(let i=1;i<=state.moviesPopularKids.results.length;i++){
+          pieces.push(state.moviesPopularKids.results[i-1])
+          if( i % 5 == 0 && i != 0){
+            newList.push(pieces);
+            pieces = [];
+          }
+          if(i == state.moviesPopularKids.results.length+1){
+            newList.push(pieces)
+          }
+        }
+        return newList;
+      },
+
+
       
     },
     modules: {},

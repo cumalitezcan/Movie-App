@@ -1,33 +1,34 @@
 <template>
   <div class="home">
     <div class="container">
-      <div class="row">
+      <div class="row mb-2">
         <Jumbotron />
-        <h2>Popular Movies</h2>
-        <div class="row">
+        <h3 class="text-start text-primary fw-light mb-1 mt-1 fw-bolder">Popular Movies</h3>
+        <div class="row d-flex align-items-center">
           <div class="col-md-1">
-            <button @click="decrement" class="btn btn-success btn-sm">Previous</button>
+            <button @click="decrement" class="btn btn-secondary"><i class="fas fa-backward"></i></button>
           </div>
-          <div class="col-md-10 d-flex flex-wrap">
+          <div class="col-md-10 d-flex justify-content-center">
             <div v-for="(movie, index) in getMoviesByParts[count]" :key="index">
               <CardItem :movie="movie" />
             </div>
           </div>
           <div class="col-md-1 text-end">
-            <button @click="increment"  class="btn btn-success btn-sm">Next</button>
+            <button class="btn btn-secondary"  @click="increment"><i class="fas fa-forward"></i></button>
           </div>
         </div>
-        <div class="row">
+         <h3 class="text-start text-primary fw-light mt-1 mb-1 fw-bolder">Popular Kids Movies</h3>
+        <div class="row d-flex align-items-center">
           <div class="col-md-1">
-            <button @click="count2!=0 ? count2-- : count2" class="btn btn-success btn-sm">Previous</button>
+            <button @click="count2!=0 ? count2-- : count2" class="btn btn-secondary"><i class="fas fa-backward"></i></button>
           </div>
-          <div class="col-md-10 d-flex flex-wrap">
-            <div v-for="(movie, index) in getMoviesByParts[count2]" :key="index">
+          <div class="col-md-10 d-flex justify-content-center">
+            <div v-for="(movie, index) in getMoviesPopulerKidsByParts[count2]" :key="index">
               <CardItem :movie="movie" />
             </div>
           </div>
           <div class="col-md-1 text-end">
-            <button @click="count2 != getMoviesByParts.length-1 ? count2++ : count2"  class="btn btn-success btn-sm">Next</button>
+            <button @click="count2 != getMoviesPopulerKidsByParts.length-1 ? count2++ : count2" class="btn btn-secondary"><i class="fas fa-forward"></i></button>
           </div>
         </div>
       </div>
@@ -67,7 +68,7 @@ export default {
 
   computed: {
     ...mapState(["movies","moviesPopularKids"]),
-    ...mapGetters(["getMoviesByParts"]),
+    ...mapGetters(["getMoviesByParts","getMoviesPopulerKidsByParts"]),
   },
 
   created() {

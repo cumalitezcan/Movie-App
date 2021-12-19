@@ -7,9 +7,9 @@
     />
     <div class="card-body">
       <div class="mb-3">
-      <h5 class="card-title" style="height:55px">{{ movie.title }}</h5>
+      <h5 class="card-title text-danger" style="height:55px">{{ movie.title }}</h5>
       </div>
-      <div class="text-center">Release Date:{{ movie.release_date }}</div>
+      <div class="text-center text-dark">Release Date: <span class="fw-bolder"> {{setDate}}</span> </div>
       <div class="float-end mt-2">
         <span class="badge rounded-pill bg-warning text-dark">{{
           movie.vote_average
@@ -17,7 +17,7 @@
       </div>
       <div class="mb-2 position-absolute bottom-0 start-50 translate-middle-x">
         <router-link :to="`/movie/detail/${movie.id}`">
-          <span class="badge bg-primary" style="width: 100%">Go Detail</span>
+          <span class="badge bg-primary" >Go Detail</span>
         </router-link>
       </div>
     </div>
@@ -32,6 +32,14 @@ export default {
       imagePath : process.env.VUE_APP_BASE_IMAGE_PATH,
     }
   },
+
+  computed:{
+    setDate(){
+      let newDate = this.movie.release_date
+      newDate = newDate.split("-").reverse().join("-");
+      return newDate
+    }
+  }
  
 };
 </script>
