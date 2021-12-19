@@ -1,4 +1,19 @@
-# movie-app
+# My Movie World
+
+Movie project developed with Vue3Js by taking data from api
+
+![Movie](https://github.com/cumalitezcan/Task1/blob/main/gifs/Movie.gif)
+
+## Getting Started
+
+#### Technologies
+- Html5
+- Css3
+- Bootstrap5
+- Vue3Js 
+- Vue Router
+- Vuex
+- Axios
 
 ## Project setup
 ```
