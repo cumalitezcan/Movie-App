@@ -42,9 +42,12 @@ export default {
 
   computed:{
     setDate(){
+      if(this.movie.release_date){
       let newDate = this.movie.release_date
       newDate = newDate.split("-").reverse().join("-");
       return newDate
+      }
+      return this.movie.release_date
     },
     setAdult(){
       let status = this.movie.adult
