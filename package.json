@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "prepare": "husky install",
     "cm": "cz"
   },
   "dependencies": {
@@ -29,8 +28,7 @@
     "commitlint-config-gitmoji": "^2.2.5",
     "cz-customizable": "^6.3.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "husky": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0"
   },
   "config": {
     "commitizen": {
