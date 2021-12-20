@@ -1,5 +1,7 @@
 # My Movie World
 
+:sunny: https://movie-app3.vercel.app/ :sunny:
+
 Movie project developed with Vue3Js by taking data from api
 
 ![Movie](https://github.com/cumalitezcan/Task1/blob/main/gifs/Movie.gif)
